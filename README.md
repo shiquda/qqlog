@@ -33,7 +33,7 @@ NTQQ 的 SQLCipher 密码是 16 字节 ASCII 字符串，无法从数据库文�
 ### 2. 安装
 
 ```bash
-git clone https://github.com/<your-name>/qqlog.git
+git clone https://github.com/shiquda/qqlog.git
 cd qqlog
 uv sync
 ```
@@ -80,7 +80,7 @@ uv run qqlog list <群号或QQ号> -n 20
 | `qqlog list <会话> [-n N]` | 看某会话最近 N 条 |
 | `qqlog show <会话> --after 2026-10-01 [--before 2026-10-10]` | 按时间区间查看 |
 | `qqlog search <关键词> [-c 会话] [-n N]` | 全文检索，命中处高亮 |
-| `qqlog export <会话> --format md\|jsonl\|html --out DIR` | 导出单个会话 |
+| `qqlog export <会话> --format {md,jsonl,html} --out DIR` | 导出单个会话 |
 | `qqlog export --all --format jsonl --out DIR` | 全量导出，每个会话一个文件 |
 
 `<会话>` 可以填群号、QQ 号，或群名/昵称的一部分；匹配到多个时会列出候选让你收窄。
